@@ -1,15 +1,7 @@
 {
   "parser": "babel-eslint",
-  "plugins": [
-    "react",
-    "prettier",
-    "import",
-    "deprecate"
-  ],
-  "extends": [
-    "plugin:react/recommended",
-    "prettier"
-  ],
+  "plugins": ["react", "prettier", "import", "deprecate"],
+  "extends": ["plugin:react/recommended", "prettier"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -17,46 +9,19 @@
         "singleQuote": true
       }
     ],
-    "arrow-body-style": [
-      2,
-      "as-needed"
-    ],
+    "arrow-body-style": [2, "as-needed"],
     "babel/camelcase": [
       2,
       {
         "properties": "never"
       }
     ],
-    "comma-dangle": [
-      0,
-      {}
-    ],
-    "complexity": [
-      2,
-      27
-    ],
-    "consistent-return": [
-      0
-    ],
-    "consistent-this": [
-      2,
-      "that"
-    ],
-    "curly": [
-      2
-    ],
-    "eqeqeq": [
-      2,
-      "allow-null"
-    ],
-    "flowtype/define-flow-type": 1,
-    "flowtype/use-flow-type": 1,
-    "flowtype/no-types-missing-file-annotation": 2,
-    "flowtype/no-dupe-keys": 2,
-    "flowtype/require-valid-file-annotation": [
-      1,
-      "always"
-    ],
+    "comma-dangle": [0, {}],
+    "complexity": [2, 27],
+    "consistent-return": [0],
+    "consistent-this": [2, "that"],
+    "curly": [2],
+    "eqeqeq": [2, "allow-null"],
     "func-style": [
       2,
       "declaration",
@@ -64,72 +29,29 @@
         "allowArrowFunctions": true
       }
     ],
-    "linebreak-style": [
-      2
-    ],
-    "max-depth": [
-      2,
-      4
-    ],
-    "max-len": [
-      0,
-      80
-    ],
-    "max-statements": [
-      2,
-      50
-    ],
-    "no-bitwise": [
-      2
-    ],
-    "no-cond-assign": [
-      2
-    ],
-    "no-const-assign": [
-      2
-    ],
-    "no-debugger": [
-      2
-    ],
-    "no-eval": [
-      2
-    ],
-    "no-extra-boolean-cast": [
-      2
-    ],
-    "no-irregular-whitespace": [
-      2
-    ],
-    "no-lonely-if": [
-      0
-    ],
-    "no-new": [
-      2
-    ],
-    "no-restricted-globals": [
-      2,
-      "fdescribe",
-      "fit"
-    ],
+    "linebreak-style": [2],
+    "max-depth": [2, 4],
+    "max-len": [0, 80],
+    "max-statements": [2, 50],
+    "no-bitwise": [2],
+    "no-cond-assign": [2],
+    "no-const-assign": [2],
+    "no-debugger": [2],
+    "no-eval": [2],
+    "no-extra-boolean-cast": [2],
+    "no-irregular-whitespace": [2],
+    "no-lonely-if": [0],
+    "no-new": [2],
+    "no-restricted-globals": [2, "fdescribe", "fit"],
     "no-shadow": [
       2,
       {
-        "allow": [
-          "$scope",
-          "state",
-          "action"
-        ]
+        "allow": ["$scope", "state", "action"]
       }
     ],
-    "no-useless-constructor": [
-      2
-    ],
-    "no-undef": [
-      2
-    ],
-    "no-underscore-dangle": [
-      0
-    ],
+    "no-useless-constructor": [2],
+    "no-undef": [2],
+    "no-underscore-dangle": [0],
     "no-unused-expressions": [
       2,
       {
@@ -143,18 +65,10 @@
         "ignoreRestSiblings": true
       }
     ],
-    "no-use-before-define": [
-      2,
-      "nofunc"
-    ],
+    "no-use-before-define": [2, "nofunc"],
     "no-var": 2,
-    "no-void": [
-      2
-    ],
-    "one-var": [
-      2,
-      "never"
-    ],
+    "no-void": [2],
+    "one-var": [2, "never"],
     "prefer-const": 2,
     "quotes": [
       2,
@@ -163,16 +77,9 @@
         "avoidEscape": true
       }
     ],
-    "strict": [
-      2,
-      "global"
-    ],
-    "no-dupe-keys": [
-      2
-    ],
-    "object-shorthand": [
-      2
-    ]
+    "strict": [2, "global"],
+    "no-dupe-keys": [2],
+    "object-shorthand": [2]
   },
   "globals": {
     "user": false,
