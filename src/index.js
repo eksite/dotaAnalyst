@@ -1,6 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import Fetch from "./components/fetch.js";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Fetch from './components/fetch.js';
+import MatchInfo from './components/MatchInfo';
 
-ReactDOM.render(<Fetch />, document.getElementById("root"));
+ReactDOM.render(<MatchInfo />, document.getElementById('root'));
