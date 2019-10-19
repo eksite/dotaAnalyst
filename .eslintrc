@@ -22,7 +22,7 @@
       "as-needed"
     ],
     "babel/camelcase": [
-      2,
+      0,
       {
         "properties": "never"
       }
