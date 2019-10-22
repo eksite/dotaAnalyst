@@ -11,7 +11,7 @@ class Fetch extends React.Component {
 
   componentDidMount() {
     fetch('https://api.opendota.com/api/heroes')
-      .then(Response => Response.json())
+      .then(response => response.json())
       .then(fetchData => this.setState({ data: fetchData }));
   }
 
@@ -29,5 +29,5 @@ class Fetch extends React.Component {
     );
   }
 }
-//
+
 export default Fetch;

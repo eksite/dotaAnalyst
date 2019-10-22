@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Div = styled.div`
+const InlineHeroes = styled.div`
   display: inline-block;
 `;
 const composeLink = longName => {
@@ -10,11 +10,9 @@ const composeLink = longName => {
 };
 
 const Hero = props => (
-  <>
-    <Div>
-      <img src={composeLink(props.name)} />
-    </Div>
-  </>
+  <InlineHeroes>
+    <img src={composeLink(props.name)} />
+  </InlineHeroes>
 );
 
 export default Hero;
