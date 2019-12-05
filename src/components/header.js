@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 
 
 const Head = styled.header`
   display: flex;
@@ -9,6 +10,9 @@ const Head = styled.header`
   justify-content: c;
 `;
 
-const Header = () => <Head>haha</Head>;
-
+const Header = () => (
+  <Head>
+    <Link to="/">Home</Link>
+  </Head>
+);
 export default Header;

@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroData from './heroData.js';
-import styled from 'styled-components';
 
 class Fetch extends React.Component {
   constructor(props) {
