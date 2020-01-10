@@ -13,7 +13,7 @@ const Head = styled.header`
 const Header = () => (
   <Head>
     <Link to="/">Home</Link>
-    <Link to="fetch">fetchOnly</Link>
+    <Link to="/fetch">fetchOnly</Link>
   </Head>
 );
 export default Header;
