@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Fetch from './components/fetch.js';
-import Header from './components/header';
-import { Router, Route, link } from 'rea';
-
-ReactDOM.render(<Header />, document.getElementById('header'));
-ReactDOM.render(<Fetch />, document.getElementById('root'));
-ReactDOM.render();
+import Mainpage from './components/App';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import Fetch from './components/fetch';
+import Match from './components/Match';
+ReactDOM.render(
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Mainpage} />
+      <Route path="/fetch" component={Fetch} />
+      <Route path="/match/:number" component={Match} />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById('root')
+);

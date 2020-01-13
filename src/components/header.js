@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 
+import { Link } from 'react-router-dom';
 
 const Head = styled.header`
   display: flex;
@@ -13,6 +13,7 @@ const Head = styled.header`
 const Header = () => (
   <Head>
     <Link to="/">Home</Link>
+    <Link to="/fetch">fetchOnly</Link>
   </Head>
 );
 export default Header;
