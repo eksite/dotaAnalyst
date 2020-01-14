@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 const MatchID = props => {
     const [matchData, setMatchData] = useState([]);
-    fetch(`https://api.opendota.com/api/matches/${props.data}`).then(data =>
-        setMatchData(data)
-    );
-    return <div>{matchData.chat}</div>;
+    useEffect(() => {
+        fetch(`https://api.opendota.com/api/matches/${props.match.params.number}`)
+            .then(Response => Response.json())
+            .then(data => setMatchData(data));
+    }, []);
+    if (matchData === undefined) {
+        return null;
+    }
+    console.log(matchData.duration);
+    return <div>{matchData.duration}</div>;
 };
 export default MatchID;

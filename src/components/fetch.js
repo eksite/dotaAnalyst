@@ -15,10 +15,6 @@ class Fetch extends React.Component {
       .then(fetchData => this.setState({ data: fetchData }));
   }
 
-  componentDidUpdate() {
-    console.log(this.state.data);
-  }
-
   render() {
     return (
       <ul>
@@ -29,5 +25,5 @@ class Fetch extends React.Component {
     );
   }
 }
-//
+
 export default Fetch;
