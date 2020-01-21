@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroData from './heroData.js';
+import HeroData from './HeroData.js';
 
 class Fetch extends React.Component {
   constructor(props) {

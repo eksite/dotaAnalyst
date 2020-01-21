@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './header';
+import Header from './Header';
 import Match from './Match';
 import { Route, Switch } from 'react-router-dom';
-import Fetch from './fetch';
+import Fetch from './Fetch';
 const links = { home: '/home', heroes: '/heroes', match: '/match' };
 
 const App = () => (
@@ -12,9 +12,11 @@ const App = () => (
       <Route path="/heroes">
         <Fetch></Fetch>
       </Route>
-      <Route path="/match">lala</Route>
-      <Route path="/match:number">
-        <Match></Match>
+      <Route exact path="/match">
+        heh
+      </Route>
+      <Route path="/match/:siteID">
+        <Match />
       </Route>
     </Switch>
   </>
