@@ -16,7 +16,6 @@ const Header = props => {
       {arr[0]}
     </Link>
   ));
-
   return res;
 };
 export default Header;
