@@ -9,16 +9,6 @@ const Head = styled.header`
   flex-direction: row;
   justify-content: c;
 `;
-const Links = items => {
-  const res = Object.entries(items).map(arr => (
-    // eslint-disable-next-line react/jsx-key
-    <Link key={arr} to={`${arr}`}>
-      {arr}
-    </Link>
-  ));
-  return res;
-};
-
 const Header = props => {
   const { items } = props;
   const res = Object.entries(items).map(arr => (
@@ -26,7 +16,7 @@ const Header = props => {
       {arr[0]}
     </Link>
   ));
-  la;
+
   return res;
 };
 export default Header;
