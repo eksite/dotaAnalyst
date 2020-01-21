@@ -13,23 +13,13 @@ const Head = styled.header`
 const input = styled.input`
   height: auto;
 `;
-
-const Header = () => (
-  <Head>
-    <Link className="link" to="/">
-      Home
+const Header = props => {
+  const { items } = props;
+  const res = Object.entries(items).map(arr => (
+    <Link key={arr[1]} to={arr[1]}>
+      {arr[0]}
     </Link>
-    <Link className="link" to="/fetch">
-      fetchOnly
-    </Link>
-    <div>
-      <input className="lala" type="text" id="matchID" />
-      <input type="button" onClick={() => {
-        const url = document.getElementById('matchID')
-          < Link to = {`/matchID/${url}`
-      } />
-      }} />
-    </div>
-  </Head>
-);
+  ));
+  return res;
+};
 export default Header;
