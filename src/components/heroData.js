@@ -1,4 +1,3 @@
-// eslint-disable-next-line babel/camelcase
 import React from 'react';
 import styled from 'styled-components';
 

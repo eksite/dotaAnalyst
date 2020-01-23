@@ -1,11 +1,11 @@
 import React from 'react';
-import useMatchData from './hooks/UseMatchData';
+import useMatchData from './hooks/useMatchData';
 import { useParams } from 'react-router-dom';
 const Match = () => {
-    const { match_id } = useParams();
+    const { matchId } = useParams();
     const matchData = useMatchData(
         'https://api.opendota.com/api/matches',
-        match_id
+        matchId
     );
     if (!matchData) {
         return <div>Next time you will be able to write match id </div>;

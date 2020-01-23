@@ -15,7 +15,7 @@ const App = () => (
       <Route exact path="/match">
         <Match />
       </Route>
-      <Route path="/match/:match_id">
+      <Route path="/match/:matchId">
         <Match />
       </Route>
     </Switch>

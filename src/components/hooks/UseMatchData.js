@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const useMatchData = (Url, params) => {
+const useMatchData = (url, params) => {
     const [matchData, setMatchData] = useState([]);
-    useEffect(() => {
-        fetch(`${Url}/${params}`)
-            .then(Response => Response.json())
-            .then(data => setMatchData(data));
+    useEffect(async () => {
+        const resp = await fetch(`${url}/${params}`);
+        const respData = resp.json();
+        setMatchData(respData);
     }, []);
     if (!params) {
         return null;
