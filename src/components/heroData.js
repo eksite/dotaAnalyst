@@ -1,18 +1,21 @@
-import React from "react";
+// eslint-disable-next-line babel/camelcase
+import React from 'react';
+import styled from 'styled-components';
 
-const Hero = props => {
-  return (
-    <>
-      <div style={{ display: "inline-block" }}>
-        <img src={composeLink(props.name)} />
-      </div>
-    </>
-  );
-};
+const Div = styled.button`
+  background-color: black;
+  color: white;
+`;
 
 const composeLink = longName => {
-  let shortName = longName.slice(14);
+  const shortName = longName.slice(14);
   return `https://api.opendota.com/apps/dota2/images/heroes/${shortName}_full.png`;
 };
-
+const Hero = props => (
+  <>
+    <Div>
+      <img src={composeLink(props.name)} />
+    </Div>
+  </>
+);
 export default Hero;
