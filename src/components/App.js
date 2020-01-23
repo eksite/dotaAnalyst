@@ -10,12 +10,12 @@ const App = () => (
     <Header items={links} />
     <Switch>
       <Route path="/heroes">
-        <Fetch></Fetch>
+        <Fetch />
       </Route>
       <Route exact path="/match">
-        heh
+        <Match />
       </Route>
-      <Route path="/match/:siteID">
+      <Route path="/match/:matchID">
         <Match />
       </Route>
     </Switch>
