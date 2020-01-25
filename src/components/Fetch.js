@@ -18,8 +18,8 @@ class Fetch extends React.Component {
   render() {
     return (
       <ul>
-        {this.state.data.map(element => (
-          <HeroImage key={element.name} name={element.name} />
+        {this.state.data.map((element, index) => (
+          <HeroImage key={index} name={element.name} />
         ))}
       </ul>
     );
