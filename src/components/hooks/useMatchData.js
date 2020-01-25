@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const useMatchData = (url, params) => {
     const [matchData, setMatchData] = useState([]);
-    (async () => {
-        const resp = await fetch(`${url}/${params}`);
-        const respData = await resp.json();
-        setMatchData(respData);
-    })();
-    if (!params) {
-        return null;
-    }
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const resp = await fetch(`${url}/${params}`);
+            const respData = await resp.json();
+            setMatchData(respData);
+        };
+        fetchData();
+    }, [url, params]);
+
     return matchData;
 };
 export default useMatchData;

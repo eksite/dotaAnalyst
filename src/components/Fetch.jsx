@@ -1,20 +1,16 @@
 import React from 'react';
-import HeroImage from './HeroImage.js';
-import useMatchData from './hooks/useMatchData'
-const fetch = () => {
-    const heroNames = useMatchData(
+import HeroImage from './HeroImage';
+import useMatchData from './hooks/useMatchData';
+const Fetch = () => {
+    const heroNames = useMatchData('https://api.opendota.com/api/heroes', '');
 
-    )
-
-    render() {
-        return (
-            <ul>
-                {this.state.data.map((element, index) => (
-                    <HeroImage key={index} name={element.name} />
-                ))}
-            </ul>
-        );
-    }
-}
+    return (
+        <ul>
+            {heroNames.map((element, index) => (
+                <HeroImage key={index} name={element.name} />
+            ))}
+        </ul>
+    );
+};
 
 export default Fetch;
