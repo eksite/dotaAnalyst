@@ -10,11 +10,12 @@ const composeLink = longName => {
   const shortName = longName.slice(14);
   return `https://api.opendota.com/apps/dota2/images/heroes/${shortName}_full.png`;
 };
-const Hero = props => (
+
+const HeroImage = props => (
   <>
     <Div>
       <img src={composeLink(props.name)} />
     </Div>
   </>
 );
-export default Hero;
+export default HeroImage;

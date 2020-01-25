@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroData from './HeroData.js';
+import HeroImage from './HeroImage.js';
 
 class Fetch extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Fetch extends React.Component {
     return (
       <ul>
         {this.state.data.map(element => (
-          <HeroData key={element.name} name={element.name} />
+          <HeroImage key={element.name} name={element.name} />
         ))}
       </ul>
     );
