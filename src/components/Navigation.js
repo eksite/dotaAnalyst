@@ -7,7 +7,7 @@ const StyledDiv = Styled.div`
 const StyledLink = Styled(Link)`
     // 
 `;
-const Links = ({ items }) => (
+const Navigation = ({ items }) => (
     <StyledDiv>
         {Object.entries(items).map(arr => (
             <StyledLink key={arr[1]} to={arr[1]}>
@@ -16,4 +16,4 @@ const Links = ({ items }) => (
         ))}
     </StyledDiv>
 );
-export default Links;
+export default Navigation;
