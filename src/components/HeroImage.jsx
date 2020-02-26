@@ -1,11 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
-const Div = styled.button`
+const Div = Styled.button`
   background-color: black;
   color: white;
+  border: none;
+  padding: 1px;
 `;
-
+const Img = Styled.img`
+  width:256px;
+  height:144px;
+`
 const composeLink = longName => {
     const shortName = longName.slice(14);
     return `https://api.opendota.com/apps/dota2/images/heroes/${shortName}_full.png`;
@@ -14,7 +19,7 @@ const composeLink = longName => {
 const HeroImage = props => (
     <>
         <Div>
-            <img alt="props.name" src={composeLink(props.name)} />
+            <Img alt="props.name" src={composeLink(props.name)} />
         </Div>
     </>
 );
