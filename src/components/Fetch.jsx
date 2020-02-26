@@ -30,7 +30,6 @@ const Fetch = () => {
                 </StyledElement>
             ))
             }
-
         </StyledWrapper >
     );
 };
