@@ -1,7 +1,9 @@
 import React from 'react';
 import useMatchData from './hooks/useMatchData';
 import { useParams } from 'react-router-dom';
-import MatchTable from './MatchTable'
+import MatchTable from './MatchTable';
+import InputField from './InputField';
+
 const Match = () => {
     const { matchId } = useParams();
     const matchData = useMatchData(
@@ -9,7 +11,7 @@ const Match = () => {
         matchId
     );
     if (!matchData.match_id) {
-        return <div>Next time you will be able to write match id</div>;
+        return <InputField />
     }
     return <MatchTable data={matchData} />;
 };

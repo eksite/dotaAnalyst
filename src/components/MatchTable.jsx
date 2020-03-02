@@ -3,7 +3,10 @@ import React from 'react';
 
 const MatchTable = props => {
     const matchData = props.data;
-    return <div>{matchData.match_id}</div>
+    console.log(matchData.players)
+    return <ul>
+        {matchData.players.map(element => <li key={element.player_slot}>{element.player_slot + " "}</li>)}
+    </ul>
 }
 
 export default MatchTable;
